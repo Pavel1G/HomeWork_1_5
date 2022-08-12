@@ -1,7 +1,10 @@
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         task1_2_3_4();
+        task5();
+        task6();
     }
 
     // Задача 1.
@@ -91,5 +94,22 @@ public class Main {
             }
         }
         System.out.println();
+    }
+
+    public static void task5() {
+        //int[][] array = new int[3][3];
+
+    }
+
+    public static void task6() {
+        int[] arrayInvert = {5, 4, 3, 2, 1};
+        int[] array = new int[arrayInvert.length];
+
+        for (int i = 0; i < arrayInvert.length; i++) {
+            array[i] = arrayInvert[arrayInvert.length - 1 - i];
+        }
+
+        System.out.println(Arrays.toString(arrayInvert));
+        System.out.println(Arrays.toString(array));
     }
 }
