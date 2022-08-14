@@ -97,6 +97,7 @@ public class Main {
         System.out.println("-----------------------------------------");
     }
 
+    //Task 5
     public static void task5() {
         int size = 5;
         int[][] array = new int[size][size];
