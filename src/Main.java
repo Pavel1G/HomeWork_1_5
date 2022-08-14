@@ -94,11 +94,25 @@ public class Main {
             }
         }
         System.out.println();
+        System.out.println("-----------------------------------------");
     }
 
     public static void task5() {
-        //int[][] array = new int[3][3];
+        int size = 5;
+        int[][] array = new int[size][size];
 
+        for (int i = 0; i < array.length; i++) {
+            array[i][i] = 1;
+            array[i][array.length - i - 1] = 1;
+        }
+
+        for (int[] row : array) {
+            for (int column : row) {
+                System.out.print(column + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("-----------------------------------------");
     }
 
     public static void task6() {
@@ -111,5 +125,6 @@ public class Main {
 
         System.out.println(Arrays.toString(arrayInvert));
         System.out.println(Arrays.toString(array));
+        System.out.println("-----------------------------------------");
     }
 }
