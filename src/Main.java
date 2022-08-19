@@ -5,6 +5,8 @@ public class Main {
         task1_2_3_4();
         task5();
         task6();
+        task7();
+        task8_9();
     }
 
     // Задача 1.
@@ -126,6 +128,35 @@ public class Main {
 
         System.out.println(Arrays.toString(arrayInvert));
         System.out.println(Arrays.toString(array));
+        System.out.println("-----------------------------------------");
+    }
+
+    public static void task7() {
+        int[] arrayInvert = {5, 4, 3, 2, 1};
+        int temp = Integer.MIN_VALUE;
+
+        for (int i = 0; i < arrayInvert.length - 1; i++) {
+            for (int j = i; j < arrayInvert.length; j++) {
+                if (arrayInvert[j] < arrayInvert[i]) {
+                    temp = arrayInvert[i];
+                    arrayInvert[i] = arrayInvert[j];
+                    arrayInvert[j] = temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arrayInvert));
+        System.out.println("-----------------------------------------");
+    }
+
+    public static void task8_9() {
+        int[] arr = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i; j < arr.length; j++) {
+                if (arr[i] + arr[j] == 2) {
+                    System.out.println(arr[i] + " " + arr[j]);
+                }
+            }
+        }
         System.out.println("-----------------------------------------");
     }
 }
